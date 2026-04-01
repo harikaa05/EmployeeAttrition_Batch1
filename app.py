@@ -41,7 +41,7 @@ if st.button("Predict Probability"):
     proba=model.predict_proba(input_df)
     prediction_proba=model.predict(input_df)
     st.subheader("Prediction Probability")
-    if prediction==1:
+    if prediction_proba[0]==1:
         st.error("The employee is likely to leave the company.")
     else:
         st.success("The employee is likely to stay with the company.")
